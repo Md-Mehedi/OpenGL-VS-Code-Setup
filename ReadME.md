@@ -1,7 +1,7 @@
 
-## How to setup Visual Studio Code to run OpenGL in Windows
+# How to setup Visual Studio Code to run OpenGL in Windows
 
-#### Compiler Setup
+### Compiler Setup
 
 >*If you already have compiler installed, you can skip this section. Only thing you have to do is check and know the directory of your installed compiler.*
 
@@ -11,7 +11,7 @@
 - Open VS Code. Go to `Setting` and search `Compiler path`
 - In `C_Cpp › Default: Compiler Path` field write `C:\MinGW`
 
-#### Path Variable Setup
+### Path Variable Setup
 
 - Search "Environment variables" in Windows search box
 - Select "Edit the system environment variables" from the list
@@ -20,14 +20,14 @@
 - Click `New` and write the 'bin' location of your installed compiler. i.e. `C:\MinGW\bin`
 - Similarly add `C:\Windows\System32` there.
 
-#### OpenGL_VS_Code_Setup Download
+### OpenGL_VS_Code_Setup Download
 
 Download this repository as zip and extracting this do the following:
 - Move all .h files of `OpenGL_VS_Code_Setup\include\` to `C:\MinGW\include\`
 - Move all .a files of `OpenGL_VS_Code_Setup\lib\` to `C:\MinGW\lib\`
 - Move all .dll files of `OpenGL_VS_Code_Setup\dll\` to `C:\Windows\System32`
 
-#### Setup an OpenGL Project
+### Setup an OpenGL Project
 
 > *For creating any new project later you have to do the following things only. Above setup only be done one time*
 
@@ -35,6 +35,7 @@ Download this repository as zip and extracting this do the following:
 - Open VS Code. Go to `File > Open Folder` then choose that folder which is created in previous.
 - Create a new file named `main.cpp` and write some code or use the code `main.cpp` given in zip file.
 - Crate a file named `Runner.sh` and write the following code into it and save it.
+Or you can move the `Runner.sh` file of downloading extracting folder to your project folder.
 
 ```batch
 g++.exe -w -g -c main.cpp -o main.o
